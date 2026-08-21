@@ -1,0 +1,8 @@
+# hanzoai/oxy — the HTTP reverse-proxy library (module github.com/vulcand/oxy/v2),
+# a framework dependency rather than a service: no Dockerfile, nothing to publish
+# but the tag, so there is no images: block to write.
+test:
+  - name: build
+    run: go build ./...
+  - name: unit
+    run: go test ./... -count=1
